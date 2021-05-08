@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/marginTop"
+    tools:context=".fragment.CardEntryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/marginTop"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginBottom="@dimen/marginTop"
+        android:layout_marginRight="@dimen/margin_left_right"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:id="@+id/yourBalance"
+            android:text="Your Card Balance"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/TextSize"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text=":"
+            android:textColor="@color/textColor"
+            android:gravity="center"
+            android:textSize="@dimen/TextSize" />
+
+
+        <TextView
+            android:id="@+id/aCardBal_fragment_entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:gravity="center"
+            android:textSize="@dimen/TextSize"
+            android:textColor="@color/textColor">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome_msg"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginRight="@dimen/margin_left_right"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/btnOk"
+            android:textColor="@color/textColor"
+            android:layout_margin="@dimen/marginTop"
+            android:textSize="35sp"
+            android:text="Welcome to the Feeder Bus"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/insufficientText"
+       android:visibility="invisible"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginRight="@dimen/margin_left_right"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="@dimen/marginTop"
+            android:text="@string/insufficient_balance_please_topup_card_and_then_avail_the_services"
+            android:textSize="@dimen/TextSize"
+            android:textStyle="bold"
+            android:textColor="@color/textColor">
+
+        </TextView>
+
+    </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

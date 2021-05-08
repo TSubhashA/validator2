@@ -1,0 +1,117 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        B602 {
+            storeFile file('..\\b602sign.jks')
+            storePassword '123456'
+            keyAlias = 'b602_sign'
+            keyPassword '123456'
+        }
+    }
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.nextgentele.busvalidator"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+        signingConfig signingConfigs.B602
+
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+//        splits {
+//            abi {
+//                enable true
+//                reset()
+//                include 'armeabi','armeabi-v7a','x86','x86_64','arm64-v8a'
+//                universalApk true
+//            }
+//        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.B602
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+def room_version = "2.2.5"
+def retrofit_version="2.9.0"
+def rxjva_version="2.0.0"
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation project(path: ':mylibraryencdec')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //b601sys
+    implementation(name: 'b601sys', ext: 'aar')
+
+    implementation files('libs/b601auxlib.jar')
+
+    //retrofit"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-java8:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+
+    //Google GPS
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    //room
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    // optional - RxJava support for Room
+    implementation "androidx.room:room-rxjava2:$room_version"
+
+    implementation "com.android.support:design:28.0.0"
+
+    //RxJava
+    implementation "io.reactivex.rxjava2:rxandroid:$rxjva_version"
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    // (see https://github.com/ReactiveX/RxJava/releases for latest 3.x.x version)
+    implementation "io.reactivex.rxjava2:rxjava:$rxjva_version"
+
+
+    //progress Bar
+    implementation 'com.github.d-max:spots-dialog:0.4@aar'
+
+}

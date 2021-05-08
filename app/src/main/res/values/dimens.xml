@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="marginTop">20dp</dimen>
+    <dimen name="HeaderMargin">10dp</dimen>
+    <dimen name="headerTextSize">25sp</dimen>
+    <dimen name="MainTextSize">22sp</dimen>
+    <dimen name="CurrentStopTextSize">22sp</dimen>
+    <dimen name="TextSize">18sp</dimen>
+    <dimen name="footerSize">16sp</dimen>
+    <dimen name="margin_left_right">10dp</dimen>
+
+</resources>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.QREntryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginTop"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Ticket Type"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize" />
+
+
+            <TextView
+                android:id="@+id/ticket_type_fragment_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="SJT"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+android:id="@+id/src_ll"
+            android:layout_marginLeft="@dimen/marginTop"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/fareFromto_third_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Source Stop "
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize" />
+
+
+            <TextView
+                android:id="@+id/src_stop_fragment_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:gravity="center"
+                android:text="Dwarka Sector 8"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="@dimen/marginTop"
+            android:layout_marginTop="@dimen/marginTop"
+
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Destination Stop"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize" />
+
+
+            <TextView
+                android:id="@+id/dest_stop_fragment_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Kapashera Border"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginTop"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Fare Amount "
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize" />
+
+
+            <TextView
+                android:id="@+id/fare_amout_fragment_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="15"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bal_ll"
+            android:layout_width="match_parent"
+android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginTop"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Current QR Balance "
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize" />
+
+
+            <TextView
+                android:id="@+id/current_bal_fragment_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="185"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="@dimen/marginTop"
+            android:layout_marginTop="@dimen/marginTop"
+
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Exit Date/Time "
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize" />
+
+
+            <TextView
+                android:id="@+id/date_fragment_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2021-02-02 11:15 AM"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/TextSize">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Thanks for using RedBus services"
+                android:textColor="@color/textColor"
+                android:textSize="35sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

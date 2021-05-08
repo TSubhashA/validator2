@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Validator</string>
+    <string name="client_id">DROID-COMTR-VER1</string>
+    <string name="welcome_to_bus_service">Welcome to the RedBus </string>
+    <string name="nextgen_telesolutions_pvt_ltd_2020">© NextGen Telesolutions Pvt. Ltd. 2020</string>
+    <string name="insufficient_balance_please_topup_card_and_then_avail_the_services">Insufficient balance, please topup card and then avail the services</string>
+
+     <string name="Route_prompt">Choose a Route</string>
+
+    <string-array name="Routes">
+        <item>Select the Trip</item>
+        <item>Route 1 Dwarka - Janakpuri</item>
+        <item>Route 2 Janakpuri - Dwarka</item>
+        <item>Route 3 Noida - Kapashera</item>
+        <item>Route 4 Kapashera - Noida</item>
+    </string-array>
+
+    <string name="station_prompt">Select Station</string>
+
+    <string-array name="Station">
+        <item>Select Station </item>
+        <item>Dwarka </item>
+        <item>Janakpuri</item>
+        <item>Kapashera</item>
+        <item>Noida</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Please Tap Your Card or Scan Your QR Code</string>
+</resources>

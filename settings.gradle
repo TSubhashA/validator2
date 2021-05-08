@@ -1,0 +1,2 @@
+include ':mylibraryencdec'
+include ':app'
